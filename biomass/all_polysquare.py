@@ -22,7 +22,7 @@ def get_quadrat():
         downleft = [center[0] - y_offset, center[1] - x_offset]
     else:
         center = [lat, lon]
-        x_offset = 1 / (111111 * math.cos(lat))
+        x_offset = 1 / (111111 * math.cos(math.radians(lat)))
         y_offset = 1 / 111111
         upright = [center[1] + x_offset, center[0] + y_offset]
         downright = [center[1] + x_offset, center[0] - y_offset]
